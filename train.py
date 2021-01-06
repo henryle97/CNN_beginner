@@ -41,6 +41,9 @@ def main():
     # LOSS + OPTIMIZER
     optimizer = torch.optim.Adam(model.parameters(), lr=LR)
     criterion = nn.CrossEntropyLoss()
+    if torch.cuda.is_available():
+        criterion = criterion.cuda()
+        model = model.cuda()
 
     best_acc = -1e3
     for epoch in range(1, EPOCHS+1):
