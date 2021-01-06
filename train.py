@@ -11,7 +11,7 @@ from utils.utils import AverageMeter, ProgressMeter, accuracy
 # CONFIG
 BATCH_SIZE = 64
 EPOCHS = 20
-LR = 1e-3
+LR = 1e-2
 PRINT_FREQ = 2
 
 
